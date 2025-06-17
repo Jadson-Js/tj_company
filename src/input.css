@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --bg1: #0d0f11;
+  --bg2: #141f24;
+  --bg3: #233942;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-bg1: var(--bg1);
+  --color-bg2: var(--bg2);
+  --color-bg3: var(--bg3);
+}
+
+body {
+  font-family: Playfair Display, serif;
+  font-display: swap;
+  background-color: var(--bg1);
+  color: #fff;
+}
