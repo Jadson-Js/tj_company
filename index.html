@@ -64,12 +64,12 @@
             </p>
           </div>
 
-          <form class="border-2 border-gray-600 p-4 backdrop-blur-xl max-w-125">
+          <form class="form border-2 border-gray-600 p-4 backdrop-blur-xl max-w-125">
             <h2 class="text-2xl text-white mb-8">Receba um orçamento personalizado em instantes.</h2>
 
             <div class="flex flex-row ">
-              <label for="whatsapp-number" class="sr-only">Digite seu WhatsApp</label>
-              <input type="tel" id="whatsapp-number" name="whatsapp" class="bg-white text-gray-800 font-serif text-lg p-2 w-full focus:outline-none" placeholder="Digite seu WhatsApp" aria-label="Digite seu número de WhatsApp para receber um orçamento">
+              <label for="message" class="sr-only">Digite seu WhatsApp</label>
+              <input type="tel" name="message" class="message bg-white text-gray-800 font-serif text-lg p-2 w-full focus:outline-none" placeholder="Digite seu WhatsApp" aria-label="Digite seu número de WhatsApp para receber um orçamento">
 
               <button type="submit" class="bg-bg1 border-4 border-white text-lg px-4 py-2">Obter Orçamento</button>
             </div>
@@ -209,19 +209,20 @@
       </div>
     </section>
 
-    <section class="bg-bg3">
-      <div class="container mx-auto max-w-[1200px]  px-8 py-16 md:px-16 flex flex-col gap-24">
-        <h2 class="text-4xl font-semibold leading-snug capitalize">
-          Perguntas frequentes.
+    <section class="bg-gray-700 py-8">
+      <div class="container mx-auto max-w-[1200px] px-8">
+        <h2 class="text-4xl font-semibold leading-snug mb-16">
+          Depoimentos.
         </h2>
 
-        <div class="flex flex-col md:flex-row gap-24">
+        <!-- Adicionado items-start para evitar que os elementos se alinhem pela altura -->
+        <div class="flex flex-col md:flex-row gap-8 items-start">
           <div class="flex-1">
-            <div class="grid grid-cols-[1fr_1fr] gap-2 w-full  h-100 md:h-full">
-              <div class="bg-gray-800 bg-[url('/public/photo_01.jpg')] bg-center bg-cover"></div>
-              <div class="bg-gray-800 bg-[url('/public/photo_01.jpg')] bg-center bg-cover"></div>
-              <div class="bg-gray-800 bg-[url('/public/photo_01.jpg')] bg-center bg-cover"></div>
-              <div class="bg-gray-800 bg-[url('/public/photo_01.jpg')] bg-center bg-cover"></div>
+            <div class="grid grid-cols-2 gap-2 w-full h-80">
+              <div class="bg-gray-600 bg-gradient-to-br from-indigo-500 to-blue-600"></div>
+              <div class="bg-gray-600 bg-gradient-to-br from-pink-500 to-red-600"></div>
+              <div class="bg-gray-600 bg-gradient-to-br from-green-500 to-teal-600"></div>
+              <div class="bg-gray-600 bg-gradient-to-br from-orange-500 to-yellow-600"></div>
             </div>
 
             <div class="flex flex-row items-center gap-2">
@@ -237,69 +238,89 @@
             </div>
           </div>
 
-          <div class="flex-1">
-            <article class="border-t-2 border-gray-400 flex flex-col gap-4 py-8">
-              <div class="flex flex-row justify-between items-center gap-2">
-                <h3 class="text-2xl">Quais tipos de ensaios fotográficos vocês realizam?</h3>
-                <div class="w-8 h-8 flex items-center">
-                  <img src="./public/close.svg" alt="Depoimento 1" class="object-cover block w-full h-full rotate-45">
+          <ul id="faq" class="flex-1">
+            <li class="faq__li">
+              <details id="faq_0" class="border-t-2 border-gray-400 py-4 group">
+                <summary class="flex flex-row justify-between items-center gap-2 cursor-pointer">
+                  <span class="text-xl">Qual é o prazo de entrega das fotos?</span>
+                  <div class="w-6 h-6 flex items-center">
+                    <span class="faq-icon text-2xl transform rotate-45 group-open:rotate-0 transition-transform">+</span>
+                  </div>
+                </summary>
+                <div class="faq-content">
+                  <p class="text-gray-400">Geralmente entregamos as fotos editadas em até 15 dias úteis após o ensaio.</p>
                 </div>
-              </div>
-              <p class="text-gray-400">Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. </p>
-            </article>
-            <article class="border-t-2 border-gray-400 flex flex-col gap-4 py-8">
-              <div class="flex flex-row justify-between items-center gap-2">
-                <h3 class="text-2xl">Quais tipos de ensaios fotográficos vocês realizam?</h3>
-                <div class="w-8 h-8 flex items-center">
-                  <img src="./public/close.svg" alt="Depoimento 1" class="object-cover block w-full h-full">
+              </details>
+            </li>
+
+            <li class="faq__li">
+              <details id="faq_1" class="border-t-2 border-gray-400 py-4 group">
+                <summary class="flex flex-row justify-between items-center gap-2 cursor-pointer">
+                  <span class="text-xl">Vocês fazem ensaios externos?</span>
+                  <div class="w-6 h-6 flex items-center">
+                    <span class="faq-icon text-2xl transform rotate-45 group-open:rotate-0 transition-transform">+</span>
+                  </div>
+                </summary>
+                <div class="faq-content">
+                  <p class="text-gray-400">Sim! Realizamos ensaios tanto em estúdio quanto em locações externas conforme sua preferência.</p>
                 </div>
-              </div>
-              <p class="text-gray-400 hidden">Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. </p>
-            </article>
-            <article class="border-t-2 border-gray-400 flex flex-col gap-4 py-8">
-              <div class="flex flex-row justify-between items-center gap-2">
-                <h3 class="text-2xl">Quais tipos de ensaios fotográficos vocês realizam?</h3>
-                <div class="w-8 h-8 flex items-center">
-                  <img src="./public/close.svg" alt="Depoimento 1" class="object-cover block w-full h-full">
+              </details>
+            </li>
+
+            <li class="faq__li">
+              <details id="faq_2" class="border-t-2 border-gray-400 py-4 group">
+                <summary class="flex flex-row justify-between items-center gap-2 cursor-pointer">
+                  <span class="text-xl">Quais tipos de ensaios fotográficos vocês realizam?</span>
+                  <div class="w-6 h-6 flex items-center">
+                    <span class="faq-icon text-2xl transform rotate-45 group-open:rotate-0 transition-transform">+</span>
+                  </div>
+                </summary>
+                <div class="faq-content">
+                  <p class="text-gray-400">Realizamos ensaios familiares, casais, gestante, newborn, infantis, corporativos e eventos especiais.</p>
                 </div>
-              </div>
-              <p class="text-gray-400 hidden">Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. </p>
-            </article>
-            <article class="border-t-2 border-gray-400 flex flex-col gap-4 py-8">
-              <div class="flex flex-row justify-between items-center gap-2">
-                <h3 class="text-2xl">Quais tipos de ensaios fotográficos vocês realizam?</h3>
-                <div class="w-8 h-8 flex items-center">
-                  <img src="./public/close.svg" alt="Depoimento 1" class="object-cover block w-full h-full">
+              </details>
+            </li>
+
+            <li class="faq__li">
+              <details id="faq_3" class="border-t-2 border-gray-400 py-4 group">
+                <summary class="flex flex-row justify-between items-center gap-2 cursor-pointer">
+                  <span class="text-xl">Como funciona o processo de agendamento?</span>
+                  <div class="w-6 h-6 flex items-center">
+                    <span class="faq-icon text-2xl transform rotate-45 group-open:rotate-0 transition-transform">+</span>
+                  </div>
+                </summary>
+                <div class="faq-content">
+                  <p class="text-gray-400">Entre em contato conosco via WhatsApp ou formulário. Conversamos sobre suas necessidades e agendamos uma data disponível.</p>
                 </div>
-              </div>
-              <p class="text-gray-400 hidden">Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. </p>
-            </article>
-            <article class="border-t-2 border-gray-400 flex flex-col gap-4 py-8">
-              <div class="flex flex-row justify-between items-center gap-2">
-                <h3 class="text-2xl">Quais tipos de ensaios fotográficos vocês realizam?</h3>
-                <div class="w-8 h-8 flex items-center">
-                  <img src="./public/close.svg" alt="Depoimento 1" class="object-cover block w-full h-full">
-                </div>
-              </div>
-              <p class="text-gray-400 hidden">Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. </p>
-            </article>
-          </div>
+              </details>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
+
+
     <section>
       <div class=" mx-auto  h-full  px-8 py-16 md:px-16 shadow-[inset_0_-150px_0_0_#141F24]">
 
-        <div class="max-w-[800px] mx-auto bg-bg3 px-4 pt-8 pb-16 flex flex-col items-center gap-16 md:pt-16 md:pb-32">
-          <h2 class="text-2xl font-semibold leading-snug text-center max-w-125 md:text-4xl">
+        <form action="https://api.web3forms.com/submit" method="POST" class="form max-w-[800px] mx-auto bg-bg3 px-4 pt-8 pb-16 flex flex-col items-center gap-16 md:pt-16 md:pb-32">
+          <input type="hidden" name="access_key" value="b3c3768e-1e9f-4eba-af73-defa897eb374">
+          <input type="hidden" name="name" value="CLIENTE" required>
+          <input type="hidden" name="email" value="vakeiro20051965@gmail.com" required>
+          <input type="hidden" name="subject" value="CLIENTE INTERESSADO" required>
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          <!-- <input type="hidden" name="webhook" value="WEBHOOK_URL_HERE" /> -->
+
+          <label for="message" class="text-2xl font-semibold leading-snug text-center max-w-125 md:text-4xl">
             Seu ensaio começa com uma boa conversa.
-          </h2>
+          </label>
           <div class="flex flex-row w-full max-w-125">
-            <input type="text" class="bg-white text-gray-800 font-serif text-lg p-2 w-full focus:outline-none" placeholder="Digite seu whatsapp">
-            <button class="bg-bg3 border-4 border-white text-2xl px-4 py-2">Enviar</button>
+            <input name="message" type="tel" class="message bg-white text-gray-800 font-serif text-lg p-2 w-full focus:outline-none" placeholder="Digite seu whatsapp" required>
+            <button type="submit" class="bg-bg3 border-4 border-white text-2xl px-4 py-2">Enviar</button>
+            <div class="h-captcha" data-captcha="true"></div>
           </div>
-        </div>
+        </form>
       </div>
     </section>
   </main>
@@ -308,6 +329,54 @@
 
     <p class="text-gray-400">(C) Copyright 2025 | TJ Company</p>
   </footer>
+
+  <script>
+    document.querySelectorAll('.form').forEach((form) => {
+      const input = form.querySelector('.message');
+
+      input.addEventListener('input', () => {
+        let val = input.value.replace(/\D/g, '');
+
+        if (val.length > 11) val = val.slice(0, 11); // Corrigido aqui
+
+        const ddd = val.slice(0, 2);
+        const prefixo = val.slice(2, 7);
+        const sufixo = val.slice(7, 11);
+
+        if (val.length >= 7) {
+          input.value = `(${ddd}) ${prefixo}-${sufixo}`;
+        } else if (val.length >= 3) {
+          input.value = `(${ddd}) ${val.slice(2)}`;
+        } else {
+          input.value = `(${val}`;
+        }
+      });
+
+      form.addEventListener('submit', (e) => {
+        if (input.length !== 11) {
+          e.preventDefault();
+          alert('Digite um número de WhatsApp válido com DDD.');
+        }
+      })
+    });
+
+    let currentFaq = null;
+    const faqUl = document.getElementById('faq');
+
+    faqUl.querySelectorAll('.faq__li').forEach((li) => {
+      const details = li.querySelector('details');
+
+      details.addEventListener('toggle', () => {
+        if (details.open) {
+          faqUl.querySelectorAll('details').forEach((other) => {
+            if (other !== details) other.open = false;
+          });
+
+          currentFaq = details.id;
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
