@@ -30,25 +30,25 @@ function changePage(page) {
 
 function changeCardsBg() {
   card0.style.cssText = `
-    background: url('./photos/photo_${
+    background: url('/public/photos/photo_${
       currentPage * 4
     }.jpg') center / cover no-repeat;
   `;
 
   card1.style.cssText = `
-    background: url('./photos/photo_${
+    background: url('/public/photos/photo_${
       1 + currentPage * 4
     }.jpg') center / cover no-repeat;
   `;
 
   card2.style.cssText = `
-    background: url('./photos/photo_${
+    background: url('/public/photos/photo_${
       2 + currentPage * 4
     }.jpg') center / cover no-repeat;
   `;
 
   card3.style.cssText = `
-    background: url('./photos/photo_${
+    background: url('/public/photos/photo_${
       3 + currentPage * 4
     }.jpg') center / cover no-repeat;
   `;
