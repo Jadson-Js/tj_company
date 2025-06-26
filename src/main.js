@@ -1,3 +1,5 @@
+import "./input.css";
+
 import animate from "./scripts/animate.cjs";
 import form from "./scripts/form.cjs";
 import scroll from "./scripts/scroll.cjs";
