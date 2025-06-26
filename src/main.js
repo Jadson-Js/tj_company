@@ -1,59 +1,30 @@
-document.querySelectorAll(".form").forEach((form) => {
-  const input = form.querySelector(".message");
+import animate from "./scripts/animate.cjs";
+import form from "./scripts/form.cjs";
+import scroll from "./scripts/scroll.cjs";
+import toggleCards from "./scripts/toggleCards.cjs";
+import toggleFaq from "./scripts/toggleFaq.cjs";
 
-  input.addEventListener("input", () => {
-    let val = input.value.replace(/\D/g, "");
+toggleCards();
+animate();
+form();
+scroll();
+toggleFaq();
 
-    if (val.length > 11) val = val.slice(0, 11); // Corrigido aqui
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const bg = el.getAttribute("data-bg");
 
-    const ddd = val.slice(0, 2);
-    const prefixo = val.slice(2, 7);
-    const sufixo = val.slice(7, 11);
-
-    if (val.length >= 7) {
-      input.value = `(${ddd}) ${prefixo}-${sufixo}`;
-    } else if (val.length >= 3) {
-      input.value = `(${ddd}) ${val.slice(2)}`;
-    } else {
-      input.value = `(${val}`;
-    }
+        if (bg) {
+          el.style.backgroundImage = `url(${bg})`;
+          el.classList.remove("bg-gray-600"); // remove placeholder se quiser
+          obs.unobserve(el);
+        }
+      }
+    });
   });
 
-  form.addEventListener("submit", (e) => {
-    if (input.length !== 11) {
-      e.preventDefault();
-      alert("Digite um número de WhatsApp válido com DDD.");
-    }
-  });
-});
-
-/* ----------------------------------------------------------- */
-
-let currentFaq = null;
-const faqUl = document.getElementById("faq");
-
-faqUl.querySelectorAll(".faq__li").forEach((li) => {
-  const details = li.querySelector("details");
-
-  details.addEventListener("toggle", () => {
-    if (details.open) {
-      faqUl.querySelectorAll("details").forEach((other) => {
-        if (other !== details) other.open = false;
-      });
-
-      currentFaq = details.id;
-    }
-  });
-});
-
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    const targetId = this.getAttribute("href").slice(1);
-    const target = document.getElementById(targetId);
-
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  });
+  document.querySelectorAll(".lazy-bg").forEach((el) => observer.observe(el));
 });

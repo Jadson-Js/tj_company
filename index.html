@@ -4,10 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./src/input.css">
-  <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYh_FZot8.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <title>Fotógrafo Profissional | Ensaios Românticos e Corporativos | JT Company</title>
+  <link rel="stylesheet" href="./src/input.css" media="print" onload="this.media='all'">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+  <meta name="description" content="Fotógrafo profissional em São Paulo especializado em ensaios românticos, corporativos e familiares. +5 anos de experiência, +200 clientes satisfeitos. Orçamento gratuito!">
+  <meta name="keywords" content="fotógrafo são paulo, ensaio casal, fotografia corporativa, ensaio romântico">
+
+  <meta property="og:title" content="Transforme sua ideia em um projeto real" />
+  <meta property="og:description" content="Landing page moderna com foco em conversão. Clique e fale conosco via WhatsApp!" />
+  <meta property="og:image" content="https://seusite.com/images/preview.jpg" />
+  <meta property="og:url" content="https://seusite.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Minha Landing" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Transforme sua ideia em um projeto real" />
+  <meta name="twitter:description" content="Landing page moderna com foco em conversão. Clique e fale conosco via WhatsApp!" />
+  <meta name="twitter:image" content="https://seusite.com/images/preview.jpg" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "TJ Company",
+  "image": "https://seusite.com/logo.png",
+  "telephone": "+55-98-98350-7939",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Exemplo, 123",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "postalCode": "01234-567",
+    "addressCountry": "BR"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "24"
+  },
+  "priceRange": "$$",
+  "url": "https://seusite.com"
+}
+</script>
 </head>
 
 <body>
@@ -50,10 +90,10 @@
   <main>
     <section id="hero" class="pt-32 h-screen bg-[linear-gradient(to_right,_#233942_50%,_#141F24_50%)] relative">
       <div class="container mx-auto max-w-[1200px]  px-8 py-8 md:py-16 ">
-        <img src="/hero_man.png" alt="Fotógrafo profissional registrando um casal feliz em um cenário romântico" loading="eager" class="absolute right-0 bottom-0 object-cover z-0 w-[50%] h-[60%] md:h-[80%]" />
+        <img src="/hero_man.png" alt="Fotógrafo profissional registrando um casal feliz em um cenário romântico" class="absolute right-0 bottom-0 object-cover z-0 w-[50%] h-[60%] md:h-[80%]" loading="lazy" width="720" height="700" />
 
         <div class="relative z-10 flex flex-col items-start md:items-start  gap-16">
-          <div class="text-center md:text-start">
+          <div class="text-center md:text-start opacity-0" data-fade>
             <h1 class="text-4xl md:text-6xl xl:text-8xl  mb-4 md:mb-8 ">
               Fotografias que eternizam o amor em cada detalhe.
             </h1>
@@ -62,7 +102,7 @@
             </p>
           </div>
 
-          <form class="form border-2 border-gray-600 p-4 backdrop-blur-xl max-w-125">
+          <form class="form border-2 border-gray-600 p-4 backdrop-blur-xl max-w-125 opacity-0" data-fade>
             <h2 class="text-2xl text-white mb-8">Receba um orçamento personalizado em instantes.</h2>
 
             <div class="flex flex-row ">
@@ -77,18 +117,18 @@
     </section>
 
     <section id="about" class="bg-bg1 py-16">
-      <div class="container mx-auto max-w-[1200px] px-8 py-16 md:px-16">
+      <div class=" container mx-auto max-w-[1200px] px-8 py-16 md:px-16">
 
-        <h2 class="text-4xl text-center mb-24  leading-snug">
+        <h2 class="text-4xl text-center mb-24  leading-snug opacity-0" data-fade>
           Porque uma foto vai muito além da imagem.
         </h2>
 
-        <div class="flex flex-col gap-12 sm:gap-8 md:gap-24 sm:flex-row-reverse">
+        <div class="flex flex-col gap-12 sm:gap-8 md:gap-24 sm:flex-row-reverse opacity-0" data-fade>
 
           <div class="flex-1 flex flex-col gap-8 sm:flex-col-reverse">
             <figure class="relative w-full h-100 md:h-120" role="img" aria-label="Representação visual de uma fotografia abstrata, com blocos de cor sobrepostos.">
-              <div class="absolute top-0 right-0 bg-gray-800  w-10/12 h-10/12" aria-hidden="true" style="background: url('./photos/photo_1.jpg') center / cover no-repeat;"></div>
-              <div class="absolute bottom-0 left-0 bg-gray-800 w-6/12 h-6/12" style="background: url('./photos/photo_2.jpg') center / cover no-repeat;" aria-hidden="true"></div>
+              <img class="absolute top-0 right-0  w-10/12 h-10/12 object-cover" src="./photos/photo_1.jpg" aria-label="Imagem de um casal se abraçando" loading="lazy" width="400" height="400"></img>
+              <img class="absolute bottom-0 left-0 w-6/12 h-6/12 object-cover" src="./photos/photo_2.jpg" aria-label="Imagem de uma pessoa dançando no São João" loading="lazy" width="240" height="240"></img>
             </figure>
 
             <p class="text-gray-400 text-lg text-center md:text-left">
@@ -99,8 +139,8 @@
           </div>
 
           <div class="flex flex-col sm:flex-1 sm:h-auto gap-32">
-            <div class="w-full h-[400px] sm:flex-1" style="background: url('./photos/photo_0.jpg') center / cover no-repeat;" aria-hidden="true"></div>
-            <div class="w-full h-1 bg-bg3" aria-hidden="true"></div>
+            <img class="w-full h-[400px] sm:flex-1 object-cover" src="./photos/photo_0.jpg" aria-label="Imagem de uma pessoa olhando para a câmera" loading="lazy" width="480" height="650"></img>
+            <div class="w-full h-1 bg-bg3"></div>
           </div>
         </div>
       </div>
@@ -109,7 +149,7 @@
     <section id="how" class="bg-bg3 py-16">
       <div class="container mx-auto max-w-[1200px] px-8 py-8 md:py-16 flex flex-row  gap-8 flex-wrap relative">
 
-        <div class=" left-8 sm:w-1/2 md:w-1/3 sm:pr-8 sm:absolute">
+        <div class=" left-8 sm:w-1/2 md:w-1/3 sm:pr-8 sm:absolute opacity-0" data-fade>
           <h2 class="text-4xl mb-4 leading-snug">
             Por que nos escolher?
           </h2>
@@ -120,32 +160,32 @@
           <div class="hidden sm:block h-60">
           </div>
 
-          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4">
-            <img src="./public/pencil.svg" alt="Ícone de caneta representando personalização" class="w-8 h-8">
+          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 opacity-0" data-fade>
+            <img src="./public/pencil.svg" alt="Ícone de caneta representando personalização" class="w-8 h-8" width="80" height="80">
             <h3 class="text-2xl">Atendimento Personalizado</h3>
             <p class="text-gray-400">Atendimento próximo e humano, com escuta ativa desde o primeiro contato. Cada ensaio é planejado de acordo com a sua personalidade e objetivo.</p>
           </li>
 
 
-          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4">
-            <img src="./public/light.svg" alt="Ícone de câmera representando qualidade fotográfica" class="w-8 h-8">
+          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 opacity-0" data-fade>
+            <img src="./public/light.svg" alt="Ícone de câmera representando qualidade fotográfica" class="w-8 h-8" width="80" height="80">
             <h3 class="text-2xl">Ideias Criativas</h3>
             <p class="text-gray-400">Não apenas capturo momentos — eu os transformo em arte. Estilos, poses e locações pensadas para valorizar quem você é.</p>
           </li>
 
-          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4">
+          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 opacity-0" data-fade>
             <img src="./public/star.svg" alt="Ícone de calendário representando flexibilidade" class="w-8 h-8">
             <h3 class="text-2xl">Satisfação Garantida</h3>
             <p class="text-gray-400">Meu compromisso é com o resultado final. Revisões, edições personalizadas e um olhar atento para que cada detalhe fique do seu jeito.</p>
           </li>
 
-          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4">
-            <img src="./public/tool.svg" alt="Ícone de estrelas representando satisfação do cliente" class="w-8 h-8">
+          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 opacity-0" data-fade>
+            <img src="./public/tool.svg" alt="Ícone de estrelas representando satisfação do cliente" class="w-8 h-8" width="80" height="80">
             <h3 class="text-2xl">Qualidade Profissional</h3>
             <p class="text-gray-400">Equipamento de ponta, edição refinada e um processo que garante qualidade em cada clique — da luz à pós-produção.</p>
           </li>
 
-          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4">
+          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 opacity-0" data-fade>
             <img src="./public/energy.svg" alt="Ícone de diamante representando exclusividade" class="w-8 h-8">
             <h3 class="text-2xl">Experiência</h3>
             <p class="text-gray-400">Com mais de 5 anos atuando como fotógrafo e mais de 200 clientes atendidos, entrego mais do que boas fotos: ofereço segurança.</p>
@@ -156,16 +196,16 @@
 
     <section id="why" class="py-16">
       <div class="container mx-auto max-w-[1200px]  px-8 py-16 md:px-16 flex flex-col gap-24">
-        <h2 class="text-4xl  leading-snug">
+        <h2 class="text-4xl  leading-snug opacity-0" data-fade>
           Depoimentos.
         </h2>
 
         <ul class="flex flex-col gap-4 md:flex-row lg:gap-8">
           <li>
-            <article class="bg-bg3 p-4 flex flex-col gap-4 ">
+            <article class="bg-bg3 p-4 flex flex-col gap-4 opacity-0" data-fade>
               <div class="flex flex-row items-center gap-8 pb-4 border-b-2 border-gray-400">
                 <div class="w-20 h-20 ">
-                  <img src="./public/depoiments/depoiment_01.png" alt="Depoimento 1" class="w-full h-auto object-cover block rounded-full">
+                  <img src="./public/depoiments/depoiment_01.png" alt="Depoimento 1" class="w-full h-auto object-cover block rounded-full" loading="lazy">
                 </div>
                 <div class="flex flex-col gap-1">
                   <h3 class="text-lg">Lovia Franciska</h3>
@@ -176,10 +216,10 @@
             </article>
           </li>
           <li>
-            <article class="bg-bg3 p-4 flex flex-col gap-4 ">
+            <article class="bg-bg3 p-4 flex flex-col gap-4 opacity-0" data-fade>
               <div class="flex flex-row items-center gap-8 pb-4 border-b-2 border-gray-400">
                 <div class="w-20 h-20 ">
-                  <img src="./public/depoiments/depoiment_01.png" alt="Depoimento 1" class="w-full h-auto object-cover block rounded-full">
+                  <img src="./public/depoiments/depoiment_01.png" alt="Depoimento 1" class="w-full h-auto object-cover block rounded-full" loading="lazy">
                 </div>
                 <div class="flex flex-col gap-1">
                   <h3 class="text-lg">Lovia Franciska</h3>
@@ -190,10 +230,10 @@
             </article>
           </li>
           <li>
-            <article class="bg-bg3 p-4 flex flex-col gap-4 ">
+            <article class="bg-bg3 p-4 flex flex-col gap-4 opacity-0" data-fade>
               <div class="flex flex-row items-center gap-8 pb-4 border-b-2 border-gray-400">
                 <div class="w-20 h-20 ">
-                  <img src="./public/depoiments/depoiment_01.png" alt="Depoimento 1" class="w-full h-auto object-cover block rounded-full">
+                  <img src="./public/depoiments/depoiment_01.png" alt="Depoimento 1" class="w-full h-auto object-cover block rounded-full" loading="lazy">
                 </div>
                 <div class="flex flex-col gap-1">
                   <h3 class="text-lg">Lovia Franciska</h3>
@@ -209,18 +249,17 @@
 
     <section id="faq" class="bg-bg3 py-24">
       <div class="container mx-auto max-w-[1200px] px-8">
-        <h2 class="text-4xl  leading-snug mb-16">
+        <h2 class="text-4xl  leading-snug mb-16 opacity-0" data-fade>
           Perguntas.
         </h2>
 
-        <!-- Adicionado items-start para evitar que os elementos se alinhem pela altura -->
-        <div class="flex flex-col md:flex-row gap-8 items-start">
+        <div class="flex flex-col md:flex-row gap-8 items-start opacity-0" data-fade>
           <div class="flex-1 w-full">
             <div class="grid grid-cols-2 gap-2 h-150">
-              <div id="card_0" class="bg-gray-600" style="background: url('./photos/photo_1.jpg') center / cover no-repeat;"></div>
-              <div id="card_1" class="bg-gray-600" style="background: url('./photos/photo_1.jpg') center / cover no-repeat;"></div>
-              <div id="card_2" class="bg-gray-600" style="background: url('./photos/photo_2.jpg') center / cover no-repeat;"></div>
-              <div id="card_3" class="bg-gray-600" style="background: url('./photos/photo_3.jpg') center / cover no-repeat;"></div>
+              <div class="bg-gray-600 faq__card lazy-bg" data-bg="./photos/photo_0.jpg" style="background: url('./photos/photo_0.jpg') center / cover no-repeat;" width="270" height="290"></div>
+              <div class="bg-gray-600 faq__card lazy-bg" data-bg="./photos/photo_1.jpg" style="background: url('./photos/photo_1.jpg') center / cover no-repeat;" width="270" height="290"></div>
+              <div class="bg-gray-600 faq__card lazy-bg" data-bg="./photos/photo_2.jpg" style="background: url('./photos/photo_2.jpg') center / cover no-repeat;" width="270" height="290"></div>
+              <div class="bg-gray-600 faq__card lazy-bg" data-bg="./photos/photo_3.jpg" style="background: url('./photos/photo_3.jpg') center / cover no-repeat;" width="270" height="290"></div>
             </div>
 
             <div class="flex flex-row items-center gap-2">
@@ -242,7 +281,7 @@
             <li class="faq__li">
               <details id="faq_0" class="border-t-2 border-gray-400 py-4 group">
                 <summary class="flex flex-row justify-between items-center gap-2 cursor-pointer">
-                  <span class="text-xl">Qual é o prazo de entrega das fotos?</span>
+                  <span class="text-2xl">Qual é o prazo de entrega das fotos?</span>
                   <div class="w-6 h-6 flex items-center">
                     <span class="faq-icon text-4xl transform group-open:rotate-45 transition-transform">+</span>
                   </div>
@@ -257,7 +296,7 @@
             <li class="faq__li">
               <details id="faq_1" class="border-t-2 border-gray-400 py-4 group">
                 <summary class="flex flex-row justify-between items-center gap-2 cursor-pointer">
-                  <span class="text-xl">Vocês fazem ensaios externos?</span>
+                  <span class="text-2xl">Vocês fazem ensaios externos?</span>
                   <div class="w-6 h-6 flex items-center">
                     <span class="faq-icon text-4xl transform group-open:rotate-45 transition-transform">+</span>
                   </div>
@@ -271,7 +310,7 @@
             <li class="faq__li">
               <details id="faq_2" class="border-t-2 border-gray-400 py-4 group">
                 <summary class="flex flex-row justify-between items-center gap-2 cursor-pointer">
-                  <span class="text-xl">Quais tipos de ensaios fotográficos vocês realizam?</span>
+                  <span class="text-2xl">Quais tipos de ensaios fotográficos vocês realizam?</span>
                   <div class="w-6 h-6 flex items-center">
                     <span class="faq-icon text-4xl transform group-open:rotate-45 transition-transform">+</span>
                   </div>
@@ -285,7 +324,7 @@
             <li class="faq__li">
               <details id="faq_3" class="border-t-2 border-gray-400 py-4 group">
                 <summary class="flex flex-row justify-between items-center gap-2 cursor-pointer">
-                  <span class="text-xl">Como funciona o processo de agendamento?</span>
+                  <span class="text-2xl">Como funciona o processo de agendamento?</span>
                   <div class="w-6 h-6 flex items-center">
                     <span class="faq-icon text-4xl transform group-open:rotate-45 transition-transform">+</span>
                   </div>
@@ -329,8 +368,7 @@
     <p class="text-gray-400">(C) Copyright 2025 | TJ Company</p>
   </footer>
 
-  <script src="./src/main.js"></script>
-  <script src="./src/faq.js"></script>
+  <script src="./src/main.js" type="module"></script>
 </body>
 
 </html>
