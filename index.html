@@ -89,13 +89,13 @@
   </header>
 
   <main>
-    <section id="hero" class="pt-32 min-h-screen bg-[linear-gradient(to_right,_#233942_50%,_#141F24_50%)] relative">
+    <section id="hero" class="pt-24 2xl:pt-32 min-h-screen bg-[linear-gradient(to_right,_#233942_50%,_#141F24_50%)] relative">
       <div class="container mx-auto max-w-[1200px]  px-8 py-8 md:py-16 ">
         <img src="/hero_man.png" alt="Fotógrafo profissional registrando um casal feliz em um cenário romântico" class="absolute right-0 bottom-0 object-cover z-0 w-[50%] h-[60%] md:h-[80%]" loading="lazy" width="720" height="700" />
 
-        <div class="relative z-10 flex flex-col items-start md:items-start  gap-16">
+        <div class="relative z-10 flex flex-col items-start md:items-start gap-16">
           <div class="text-center md:text-start ">
-            <h1 class="text-4xl md:text-6xl xl:text-8xl  mb-4 md:mb-8 ">
+            <h1 class="text-4xl md:text-5xl xl:text-7xl  mb-4 md:mb-8 ">
               Fotografias que eternizam o amor em cada detalhe.
             </h1>
             <p class="text-gray-400 text-lg md:text-2xl xl:max-w-[50%] ">
@@ -103,33 +103,32 @@
             </p>
           </div>
 
-          <form class="w-full max-w-md rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm space-y-6">
-            <h2 class="text-2xl font-semibold text-white text-center">Peça seu orçamento personalizado</h2>
+          <div class="bg-bg3 p-8 rounded-sm shadow-2xl shadow-black/50 ring-1 ring-white/10 backdrop-blur-xl min-w-lg">
+            <form action="URL_PARA_ONDE_ENVIAR_O_FORMULARIO" method="POST">
+              <div class="grid grid-cols-1 gap-y-8">
 
-            <div>
-              <label for="name" class="block text-sm font-medium leading-6 text-gray-200">Nome</label>
-              <div class="mt-2">
-                <input type="text" name="topName" id="topName" autocomplete="name" required class="w-full rounded-md border-0 bg-white/5 py-2.5 px-3.5 text-white ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition" placeholder="Digite seu nome completo">
+                <div class="relative">
+                  <input type="text" name="name" id="name" class="peer block w-full rounded-md border-0 bg-white/10 px-3.5 py-3 text-white placeholder-transparent shadow-sm ring-1 ring-inset ring-white/20 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500 transition-all" placeholder="Seu nome completo" required>
+                  <label for="name" class="absolute left-3.5 -top-5 text-gray-400 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-300 peer-placeholder-shown:top-3 peer-focus:-top-5 peer-focus:text-teal-400 peer-focus:text-sm pointer-events-none">
+                    Seu nome completo
+                  </label>
+                </div>
+
+                <div class="relative mt-2">
+                  <input type="tel" name="whatsapp" id="whatsapp" class="peer block w-full rounded-md border-0 bg-white/10 px-3.5 py-3 text-white placeholder-transparent shadow-sm ring-1 ring-inset ring-white/20 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500 transition-all" placeholder="(99) 99999-9999" required>
+                  <label for="whatsapp" class="absolute left-3.5 -top-5 text-gray-400 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-300 peer-placeholder-shown:top-3 peer-focus:-top-5 peer-focus:text-teal-400 peer-focus:text-sm pointer-events-none">
+                    Seu WhatsApp
+                  </label>
+                </div>
               </div>
-            </div>
 
-            <div>
-              <label for="whatsapp" class="block text-sm font-medium leading-6 text-gray-200">WhatsApp</label>
-              <div class="mt-2">
-                <input type="tel" name="topWhatsapp" id="topWhatsapp" autocomplete="tel" required class="w-full rounded-md border-0 bg-white/5 py-2.5 px-3.5 text-white ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition" placeholder="(99) 99999-9999">
+              <div class="mt-12">
+                <button type="submit" class="block w-full rounded-md bg-gradient-to-r from-teal-600 to-teal-500 px-3.5 py-4 text-center font-semibold text-white shadow-lg transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-[0_0_25px_theme(colors.teal.500/60%)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 cursor-pointer">
+                  QUERO MINHA PROPOSTA!
+                </button>
               </div>
-            </div>
-
-            <div>
-              <button type="submit" class="w-full rounded-md bg-teal-600 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-colors duration-200 cursor-pointer">
-                Quero meu Orçamento
-              </button>
-            </div>
-
-            <p class="text-center text-xs text-gray-400">
-              Seus dados estão seguros. Entraremos em contato apenas sobre seu orçamento.
-            </p>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -392,8 +391,8 @@
               </div>
 
               <div>
-                <button type="submit" class="w-full rounded-md bg-teal-600 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-colors duration-200 cursor-pointer">
-                  Quero meu Orçamento
+                <button type="submit" class="block w-full rounded-md bg-gradient-to-r from-teal-600 to-teal-500 px-3.5 py-4 text-center font-semibold text-white shadow-lg transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-[0_0_25px_theme(colors.teal.500/60%)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 cursor-pointer">
+                  QUERO MINHA PROPOSTA!
                 </button>
               </div>
 
