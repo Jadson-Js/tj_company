@@ -89,12 +89,12 @@
   </header>
 
   <main>
-    <section id="hero" class="pt-32 h-screen bg-[linear-gradient(to_right,_#233942_50%,_#141F24_50%)] relative">
+    <section id="hero" class="pt-32 min-h-screen bg-[linear-gradient(to_right,_#233942_50%,_#141F24_50%)] relative">
       <div class="container mx-auto max-w-[1200px]  px-8 py-8 md:py-16 ">
         <img src="/hero_man.png" alt="Fotógrafo profissional registrando um casal feliz em um cenário romântico" class="absolute right-0 bottom-0 object-cover z-0 w-[50%] h-[60%] md:h-[80%]" loading="lazy" width="720" height="700" />
 
         <div class="relative z-10 flex flex-col items-start md:items-start  gap-16">
-          <div class="text-center md:text-start opacity-0" data-fade>
+          <div class="text-center md:text-start ">
             <h1 class="text-4xl md:text-6xl xl:text-8xl  mb-4 md:mb-8 ">
               Fotografias que eternizam o amor em cada detalhe.
             </h1>
@@ -103,15 +103,32 @@
             </p>
           </div>
 
-          <form class="form border-2 border-gray-600 p-4 backdrop-blur-xl max-w-125 opacity-0" data-fade>
-            <h2 class="text-2xl text-white mb-8">Receba um orçamento personalizado em instantes.</h2>
+          <form class="w-full max-w-md rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm space-y-6">
+            <h2 class="text-2xl font-semibold text-white text-center">Peça seu orçamento personalizado</h2>
 
-            <div class="flex flex-row ">
-              <label for="message" class="sr-only">Digite seu WhatsApp</label>
-              <input type="tel" name="message" class="message bg-white text-gray-800  text-lg p-2 w-full focus:outline-none font-serif" placeholder="Digite seu WhatsApp" aria-label="Digite seu número de WhatsApp para receber um orçamento">
-
-              <button type="submit" class="bg-bg1 border-4 border-white text-lg px-4 py-2">Obter Orçamento</button>
+            <div>
+              <label for="name" class="block text-sm font-medium leading-6 text-gray-200">Nome</label>
+              <div class="mt-2">
+                <input type="text" name="topName" id="topName" autocomplete="name" required class="w-full rounded-md border-0 bg-white/5 py-2.5 px-3.5 text-white ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition" placeholder="Digite seu nome completo">
+              </div>
             </div>
+
+            <div>
+              <label for="whatsapp" class="block text-sm font-medium leading-6 text-gray-200">WhatsApp</label>
+              <div class="mt-2">
+                <input type="tel" name="topWhatsapp" id="topWhatsapp" autocomplete="tel" required class="w-full rounded-md border-0 bg-white/5 py-2.5 px-3.5 text-white ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition" placeholder="(99) 99999-9999">
+              </div>
+            </div>
+
+            <div>
+              <button type="submit" class="w-full rounded-md bg-teal-600 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-colors duration-200 cursor-pointer">
+                Quero meu Orçamento
+              </button>
+            </div>
+
+            <p class="text-center text-xs text-gray-400">
+              Seus dados estão seguros. Entraremos em contato apenas sobre seu orçamento.
+            </p>
           </form>
         </div>
       </div>
@@ -120,11 +137,11 @@
     <section id="about" class="bg-bg1 py-16">
       <div class=" container mx-auto max-w-[1200px] px-8 py-16 md:px-16">
 
-        <h2 class="text-4xl text-center mb-24  leading-snug opacity-0" data-fade>
+        <h2 class="text-4xl text-center mb-24  leading-snug ">
           Porque uma foto vai muito além da imagem.
         </h2>
 
-        <div class="flex flex-col gap-12 sm:gap-8 md:gap-24 sm:flex-row-reverse opacity-0" data-fade>
+        <div class="flex flex-col gap-12 sm:gap-8 md:gap-24 sm:flex-row-reverse ">
 
           <div class="flex-1 flex flex-col gap-8 sm:flex-col-reverse">
             <figure class="relative w-full h-100 md:h-120" role="img" aria-label="Representação visual de uma fotografia abstrata, com blocos de cor sobrepostos.">
@@ -150,7 +167,7 @@
     <section id="how" class="bg-bg3 py-16">
       <div class="container mx-auto max-w-[1200px] px-8 py-8 md:py-16 flex flex-row  gap-8 flex-wrap relative">
 
-        <div class=" left-8 sm:w-1/2 md:w-1/3 sm:pr-8 sm:absolute opacity-0" data-fade>
+        <div class=" left-8 sm:w-1/2 md:w-1/3 sm:pr-8 sm:absolute ">
           <h2 class="text-4xl mb-4 leading-snug">
             Por que nos escolher?
           </h2>
@@ -161,32 +178,32 @@
           <div class="hidden sm:block h-60">
           </div>
 
-          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 opacity-0" data-fade>
+          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 ">
             <img src="./public/pencil.svg" alt="Ícone de caneta representando personalização" class="w-8 h-8" width="80" height="80">
             <h3 class="text-2xl">Atendimento Personalizado</h3>
             <p class="text-gray-400">Atendimento próximo e humano, com escuta ativa desde o primeiro contato. Cada ensaio é planejado de acordo com a sua personalidade e objetivo.</p>
           </li>
 
 
-          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 opacity-0" data-fade>
+          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 ">
             <img src="./public/light.svg" alt="Ícone de câmera representando qualidade fotográfica" class="w-8 h-8" width="80" height="80">
             <h3 class="text-2xl">Ideias Criativas</h3>
             <p class="text-gray-400">Não apenas capturo momentos — eu os transformo em arte. Estilos, poses e locações pensadas para valorizar quem você é.</p>
           </li>
 
-          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 opacity-0" data-fade>
+          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 ">
             <img src="./public/star.svg" alt="Ícone de calendário representando flexibilidade" class="w-8 h-8">
             <h3 class="text-2xl">Satisfação Garantida</h3>
             <p class="text-gray-400">Meu compromisso é com o resultado final. Revisões, edições personalizadas e um olhar atento para que cada detalhe fique do seu jeito.</p>
           </li>
 
-          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 opacity-0" data-fade>
+          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 ">
             <img src="./public/tool.svg" alt="Ícone de estrelas representando satisfação do cliente" class="w-8 h-8" width="80" height="80">
             <h3 class="text-2xl">Qualidade Profissional</h3>
             <p class="text-gray-400">Equipamento de ponta, edição refinada e um processo que garante qualidade em cada clique — da luz à pós-produção.</p>
           </li>
 
-          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 opacity-0" data-fade>
+          <li class="border-3 border-gray-600 p-4 flex flex-col gap-4 ">
             <img src="./public/energy.svg" alt="Ícone de diamante representando exclusividade" class="w-8 h-8">
             <h3 class="text-2xl">Experiência</h3>
             <p class="text-gray-400">Com mais de 5 anos atuando como fotógrafo e mais de 200 clientes atendidos, entrego mais do que boas fotos: ofereço segurança.</p>
@@ -197,13 +214,13 @@
 
     <section id="why" class="py-16">
       <div class="container mx-auto max-w-[1200px]  px-8 py-16 md:px-16 flex flex-col gap-24">
-        <h2 class="text-4xl  leading-snug opacity-0" data-fade>
+        <h2 class="text-4xl  leading-snug ">
           Depoimentos.
         </h2>
 
         <ul class="flex flex-col gap-4 md:flex-row lg:gap-8">
           <li>
-            <article class="bg-bg3 p-4 flex flex-col gap-4 opacity-0" data-fade>
+            <article class="bg-bg3 p-4 flex flex-col gap-4 ">
               <div class="flex flex-row items-center gap-8 pb-4 border-b-2 border-gray-400">
                 <div class="w-20 h-20 ">
                   <img src="./public/depoiments/depoiment_01.png" alt="Depoimento 1" class="w-full h-auto object-cover block rounded-full" loading="lazy">
@@ -217,7 +234,7 @@
             </article>
           </li>
           <li>
-            <article class="bg-bg3 p-4 flex flex-col gap-4 opacity-0" data-fade>
+            <article class="bg-bg3 p-4 flex flex-col gap-4 ">
               <div class="flex flex-row items-center gap-8 pb-4 border-b-2 border-gray-400">
                 <div class="w-20 h-20 ">
                   <img src="./public/depoiments/depoiment_01.png" alt="Depoimento 1" class="w-full h-auto object-cover block rounded-full" loading="lazy">
@@ -231,7 +248,7 @@
             </article>
           </li>
           <li>
-            <article class="bg-bg3 p-4 flex flex-col gap-4 opacity-0" data-fade>
+            <article class="bg-bg3 p-4 flex flex-col gap-4 ">
               <div class="flex flex-row items-center gap-8 pb-4 border-b-2 border-gray-400">
                 <div class="w-20 h-20 ">
                   <img src="./public/depoiments/depoiment_01.png" alt="Depoimento 1" class="w-full h-auto object-cover block rounded-full" loading="lazy">
@@ -250,11 +267,11 @@
 
     <section id="faq" class="bg-bg3 py-24">
       <div class="container mx-auto max-w-[1200px] px-8">
-        <h2 class="text-4xl  leading-snug mb-16 opacity-0" data-fade>
+        <h2 class="text-4xl  leading-snug mb-16 ">
           Perguntas.
         </h2>
 
-        <div class="flex flex-col md:flex-row gap-8 items-start opacity-0" data-fade>
+        <div class="flex flex-col md:flex-row gap-8 items-start ">
           <div class="flex-1 w-full">
             <div class="grid grid-cols-2 gap-2 h-150">
               <div class="bg-gray-600 faq__card lazy-bg" data-bg="./photos/photo_0.jpg" style="background: url('./photos/photo_0.jpg') center / cover no-repeat;" width="270" height="290"></div>
@@ -340,28 +357,56 @@
       </div>
     </section>
 
-    <section id="contact" class="pt-16">
-      <div class=" mx-auto  h-full  px-8 py-16 md:px-16 shadow-[inset_0_-150px_0_0_#141F24]">
+    <section class="relative bg-bg1 py-24 sm:py-32 overflow-hidden">
 
-        <form action="https://api.web3forms.com/submit" method="POST" class="form max-w-[800px] mx-auto bg-bg3 px-4 pt-8 pb-16 flex flex-col items-center gap-16 md:pt-16 md:pb-32">
-          <input type="hidden" name="access_key" value="b3c3768e-1e9f-4eba-af73-defa897eb374">
-          <input type="hidden" name="name" value="CLIENTE" required>
-          <input type="hidden" name="email" value="vakeiro20051965@gmail.com" required>
-          <input type="hidden" name="subject" value="CLIENTE INTERESSADO" required>
-          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-          <!-- <input type="hidden" name="webhook" value="WEBHOOK_URL_HERE" /> -->
 
-          <label for="message" class="text-2xl leading-snug text-center max-w-125 md:text-4xl">
-            Seu ensaio começa com uma boa conversa.
-          </label>
-          <div class="flex flex-row w-full max-w-125">
-            <input name="message" type="tel" class="message bg-white text-gray-800 font-serif text-lg p-2 w-full focus:outline-none" placeholder="Digite seu whatsapp" required>
-            <button type="submit" class="bg-bg3 border-4 border-white text-2xl px-4 py-2">Enviar</button>
-            <div class="h-captcha" data-captcha="true"></div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-16 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
+
+          <div class="text-center lg:text-left">
+
+            <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl bg-gradient-to-r from-white to-gray-400 bg-clip-text">
+              Vamos Criar Algo Incrível Juntos
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-gray-300">
+              Pronto para transformar seus momentos em memórias inesquecíveis? Deixe seu contato e retornaremos com uma proposta exclusiva.
+            </p>
           </div>
-        </form>
+
+          <div class="mt-16 lg:mt-0">
+            <form class="w-full max-w-lg rounded-lg border border-white/10 bg-bg2 p-6 backdrop-blur-sm space-y-6">
+              <h2 class="text-2xl font-semibold text-white text-center">Peça seu orçamento personalizado</h2>
+
+              <div>
+                <label for="name" class="block text-sm font-medium leading-6 text-gray-200">Nome</label>
+                <div class="mt-2">
+                  <input type="text" name="bottomName" id="bottomName" autocomplete="name" required class="w-full rounded-md border-0 bg-white/5 py-2.5 px-3.5 text-white ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition" placeholder="Digite seu nome completo">
+                </div>
+              </div>
+
+              <div>
+                <label for="whatsapp" class="block text-sm font-medium leading-6 text-gray-200">WhatsApp</label>
+                <div class="mt-2">
+                  <input type="tel" name="bottomWhatsapp" id="bottomWhatsapp" autocomplete="tel" required class="w-full rounded-md border-0 bg-white/5 py-2.5 px-3.5 text-white ring-1 ring-inset ring-white/20 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 transition" placeholder="(99) 99999-9999">
+                </div>
+              </div>
+
+              <div>
+                <button type="submit" class="w-full rounded-md bg-teal-600 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-colors duration-200 cursor-pointer">
+                  Quero meu Orçamento
+                </button>
+              </div>
+
+              <p class="text-center text-xs text-gray-400">
+                Seus dados estão seguros. Entraremos em contato apenas sobre seu orçamento.
+              </p>
+            </form>
+          </div>
+
+        </div>
       </div>
     </section>
+
   </main>
   <footer class="bg-bg2 flex flex-col justify-center items-center px-4 py-16 gap-24">
     <h2 class="text-6xl md:text-8xl text-center">TJ Company</h2>

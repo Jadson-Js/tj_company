@@ -1,13 +1,11 @@
 import "./input.css";
 
-import animate from "./scripts/animate.cjs";
 import form from "./scripts/form.cjs";
 import scroll from "./scripts/scroll.cjs";
 import toggleCards from "./scripts/toggleCards.cjs";
 import toggleFaq from "./scripts/toggleFaq.cjs";
 
 toggleCards();
-animate();
 form();
 scroll();
 toggleFaq();
